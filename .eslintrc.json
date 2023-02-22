@@ -1,0 +1,25 @@
+{
+    "root": true, // This tells ESLint to stop looking for config files in parent folders
+    // Use the recommended set of linting rules provided by ESLint
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended"
+    ],
+    "parserOptions": {
+        "sourceType": "module", // Allows for the use of imports
+        "ecmaVersion": 2020 // Allows for the parsing of modern ECMAScript features
+    },
+    // An environment provides predefined global variables.
+    "env": {
+        "browser": true, // Browser global variables (`window` and `document`)
+        "node": true // Node.js global vairbles and Node.js scoping (process, global, etc.)
+    },
+    "rules": {
+        "react/react-in-jsx-scope": "off", // No need to import React in components
+        "indent": ["error", 4], // Use 4 spaces for indentation
+        "semi": ["error", "always"], // Always use semicolons
+        "react/prop-types": "off", // No need to specify prop types
+        "no-unused-vars": "off" // No need to specify prop types
+    }
+}
